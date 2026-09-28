@@ -1,0 +1,151 @@
+/* Stile del container generale */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Navbar */
+.navbar {
+  border-bottom: 1px solid #2a2e3f;
+  padding: 1rem 0;
+}
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.navbar__brand {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-right: auto;
+}
+.navbar__link {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+.navbar__link.active {
+  color: var(--accent);
+}
+
+main {
+  padding: 2rem 0 4rem;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 420px;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #2a2e3f;
+  background: var(--surface);
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.favorites-counter {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.error-message {
+  color: var(--danger);
+}
+
+/* Stile della MovieCard */
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.25rem;
+}
+
+.movie-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+  display: flex;
+  flex-direction: column;
+}
+.movie-card:hover {
+  transform: translateY(-4px);
+  background: var(--surface-hover);
+}
+
+/* Classe dinamica per i preferiti */
+.movie-card--favorite {
+  border-color: var(--accent);
+}
+
+.movie-card__link {
+  display: block;
+}
+
+.movie-card__poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-card__body {
+  padding: 0.75rem 0.9rem 0.5rem;
+}
+
+.movie-card__title {
+  font-size: 0.95rem;
+  margin: 0 0 0.25rem;
+}
+
+.movie-card__year {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0 0 0.35rem;
+}
+
+.movie-card__status {
+  font-size: 0.85rem;
+  margin: 0 0 0.35rem;
+}
+
+.movie-card__badge {
+  display: inline-block;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+
+.movie-card__favorite-btn {
+  border: none;
+  background: transparent;
+  color: var(--accent);
+  padding: 0.5rem 0.9rem 0.75rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.movie-list__empty {
+  color: var(--text-muted);
+}
+
+.back-btn {
+  border: none;
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+}
+
+.movie-detail img {
+  max-width: 300px;
+  border-radius: var(--radius);
+}
+
+.not-found {
+  text-align: center;
+  padding: 3rem 0;
+}
